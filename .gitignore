@@ -12,7 +12,6 @@ env_ta/
 
 # Distribution / packaging
 .Python
-env/
 build/
 develop-eggs/
 dist/
@@ -87,6 +86,12 @@ celerybeat-schedule
 # pycharm
 .idea/*
 
+# pytest
+.pytest_cache/
+
+# pytest debug logs generated via --debug
+pytestdebug.log
+
 # dotenv
 .env
 
@@ -95,6 +100,7 @@ celerybeat-schedule
 venv/
 ENV/
 env/**
+.env*/
 
 # Spyder project settings
 .spyderproject
@@ -112,25 +118,22 @@ env/**
 # vscode settings
 .vscode/**
 
+# zed settings
+.zed
+.zed/**
+
 # Original Source (Dev)
 pandas_ta/_wrapper.py
 
 # twopirllc stuff
-notes.md
 setup.cfg
-doc.py
-pandas_pips
-reqs.txt
-driver.py
-qd.py
-tdseq.py
+Dockerfile
 
 # Local package installs
 ta-lib/
 AlphaVantageAPI/
 
 # Data & NB Exclusions
-*.csv
 data/datas.csv
 data/f500.csv
 data/GLD_D_tv.csv
@@ -142,5 +145,10 @@ data/SPY_D_TV3.csv
 data/TV_5min.csv
 data/tulip.csv
 examples/*.csv
-jnb/*.ipynb
-jnb/*.txt
+jnb/
+notes/
+csv/
+
+*.txt
+df_file
+/.vs/slnx.sqlite

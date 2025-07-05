@@ -52,25 +52,22 @@ address, posting via an official social media account, or acting as an appointed
 representative at an online or offline event. Representation of a project may be
 further defined and clarified by project maintainers.
 
+## Guidelines
+
+Not everyone is familiar with open-source communities or intuitively understands what is acceptable behavior. To assist, the following guidelines and examples provide a quick overview to help you avoid common pitfalls:
+
+1. Do **not** feel entitled to free software, support, or advice, especially if you are **not** a contributor, member, or business customer. Do **not** expect others to give you status reports as if they work for you or owe you something, even if you've made a donation. Please refrain from using GitHub Issues or other development tools for general discussions, technical support, or personal opinions.
+
+2. Slow down and **read** the documentation and use the troubleshooting checklists provided to identify the root cause of a problem **before** submitting _invalid_ bug reports, inciting public disputes, or insulting community members in public spaces. Such actions are disruptive and prevent maintainers and contributors from working on features and improvements that benefit users.
+
+3. Ignorant, reckless, or harsh  communication is unacceptable, whether public or private.
+
+Many issues that new users become upset about in old issue comments have been resolved. If not, rest assured that we are working diligently to improve the software.
+
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported by contacting the project team at appliedmathkj@gmail.com. All
-complaints will be reviewed and investigated and will result in a response that
-is deemed necessary and appropriate to the circumstances. The project team is
-obligated to maintain confidentiality with regard to the reporter of an incident.
-Further details of specific enforcement policies may be posted separately.
+We will enforce our community standards as necessary appropriate to the circumstances to protect everyone's well-being if there are instances of abusive, harassing, or otherwise unacceptable behavior.
 
-Project maintainers who do not follow or enforce the Code of Conduct in good
-faith may face temporary or permanent repercussions as determined by other
-members of the project's leadership.
+Initial warnings may be issued in the form of a snarky comment, especially if you seem to be exhibiting behaviour from Guideline #3 above. For serious cases, we will refer you to this Code of Conduct to prevent any misunderstandings. We also reserve the right to remove rants, personal attacks, spam, and unsolicited advertising from our community forums.
 
-## Attribution
-
-This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.4,
-available at https://www.contributor-covenant.org/version/1/4/code-of-conduct.html
-
-[homepage]: https://www.contributor-covenant.org
-
-For answers to common questions about this code of conduct, see
-https://www.contributor-covenant.org/faq
+In addition, we may use technical measures to temporarily or permanently restrict your access to our infrastructure.

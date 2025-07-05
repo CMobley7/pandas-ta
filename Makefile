@@ -1,31 +1,31 @@
-.PHONY: all
-all:
-	make test_utils
-	make test_metrics
-	make test_ta
-	make test_ext
-	make test_strats
+.PHONY: tests
+tests:
+	pytest -vvv -s -l tests
 
 caches:
-	find ./pandas_ta | grep -E "(__pycache__|\.pyc|\.pyo$\)"
+	find pandas_ta -type d -name "__pycache__"
+	find tests -type d -name "__pycache__"
+	find __pycache__ -type d -name "__pycache__"
 
 clean:
-	find . -name '*.pyc' -exec rm -f {} +
+	find pandas_ta -type d -name "__pycache__" -exec rm -r {} +
+	find tests -type d -name "__pycache__" -exec rm -r {} +
+	find __pycache__ -type d -name "__pycache__" -exec rm -r {} +
 
 init:
 	pip install -r requirements.txt
 
-test_ext:
-	python -m unittest -v -f tests/test_ext_indicator_*.py
-
 test_metrics:
-	python -m unittest -v -f tests/test_utils_metrics.py
+	pytest -vv -s -l -W ignore::DeprecationWarning --cache-clear tests/test_metrics.py
 
-test_strats:
-	python -m unittest -v -f tests/test_strategy.py
+test_numba:
+	pytest -vv -s -l -W ignore::DeprecationWarning --cache-clear tests/test_numba.py
+
+test_studies:
+	pytest -vv -s -l -W ignore::DeprecationWarning --cache-clear tests/test_studies.py
 
 test_ta:
-	python -m unittest -v -f tests/test_indicator_*.py
+	pytest -vv -s -l -W ignore::DeprecationWarning --cache-clear tests/test_indicator_*.py
 
 test_utils:
-	python -m unittest -v -f tests/test_utils.py
+	pytest -vv -s -l -W ignore::DeprecationWarning --cache-clear tests/test_utils.py
