@@ -58,7 +58,7 @@ jobs:
           TA_INCLUDE_PATH: ${{ github.workspace }}/dependencies/include
           TA_LIBRARY_PATH: ${{ github.workspace }}/dependencies/lib
 
-      - name: Install pandas-ta
+      - name: Install polars-ti
         run: |
           python -m pip install ".[test]"
 
