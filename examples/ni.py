@@ -1,14 +1,18 @@
 # -*- coding: utf-8 -*-
 from pandas import Series
-from pandas_ta._typing import DictLike, Int, IntFloat
-from pandas_ta.ma import ma
-from pandas_ta.utils import v_mamode, v_offset, v_pos_default, v_series
+from polars_ti._typing import DictLike, Int, IntFloat
+from polars_ti.ma import ma
+from polars_ti.utils import v_mamode, v_offset, v_pos_default, v_series
+
 
 # - Standard definition of your custom indicator function (including docs)-
 def ni(
-    close: Series, length: Int = None,
-    centered: bool = False, mamode: str = None,
-    offset: Int = None, **kwargs: DictLike
+    close: Series,
+    length: Int = None,
+    centered: bool = False,
+    mamode: str = None,
+    offset: Int = None,
+    **kwargs: DictLike,
 ):
     """Example indicator (NI)
 
@@ -39,7 +43,7 @@ def ni(
 
     Returns:
         pd.Series: New feature generated.
-    """    # Validate Arguments
+    """  # Validate Arguments
     length = v_pos_default(length, 20)
     close = v_series(close, length)
 
@@ -73,6 +77,7 @@ def ni(
 
 
 # - Define a matching class method --------------------------------------------
+
 
 def ni_method(self, length=None, offset=None, **kwargs):
     close = self._get_column(kwargs.pop("close", "close"))

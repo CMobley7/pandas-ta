@@ -1,7 +1,7 @@
 {
     "name": "Sample JSON Study",
     "description": "Sample JSON Study",
-    "ta": [
+    "ti": [
         {"kind": "ema", "length": 8, "sma": true},
         {"kind": "ema", "length": 21, "talib": true},
         {"kind": "sma", "length": 50, "talib": true},

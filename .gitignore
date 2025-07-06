@@ -123,9 +123,9 @@ env/**
 .zed/**
 
 # Original Source (Dev)
-pandas_ta/_wrapper.py
+polars_ti/_wrapper.py
 
-# twopirllc stuff
+# CMobley7 stuff
 setup.cfg
 Dockerfile
 

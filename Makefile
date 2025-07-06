@@ -3,12 +3,12 @@ tests:
 	pytest -vvv -s -l tests
 
 caches:
-	find pandas_ta -type d -name "__pycache__"
+	find polars_ti -type d -name "__pycache__"
 	find tests -type d -name "__pycache__"
 	find __pycache__ -type d -name "__pycache__"
 
 clean:
-	find pandas_ta -type d -name "__pycache__" -exec rm -r {} +
+	find polars_ti -type d -name "__pycache__" -exec rm -r {} +
 	find tests -type d -name "__pycache__" -exec rm -r {} +
 	find __pycache__ -type d -name "__pycache__" -exec rm -r {} +
 
@@ -24,7 +24,7 @@ test_numba:
 test_studies:
 	pytest -vv -s -l -W ignore::DeprecationWarning --cache-clear tests/test_studies.py
 
-test_ta:
+test_ti:
 	pytest -vv -s -l -W ignore::DeprecationWarning --cache-clear tests/test_indicator_*.py
 
 test_utils:
