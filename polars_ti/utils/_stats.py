@@ -4,8 +4,6 @@ from polars_ti._typing import Array, IntFloat, Number, Union
 from polars_ti.maps import Imports
 from polars_ti.utils import hpoly
 
-__all__ = ["inv_norm"]
-
 
 def _gaussian_poly_coefficients() -> Array:
     """Three pairs of Polynomial Approximation Coefficients

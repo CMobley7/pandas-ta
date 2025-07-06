@@ -13,8 +13,7 @@ from polars_ti.utils import (
     v_series,
     v_talib,
 )
-
-from .true_range import true_range
+from polars_ti.volatility.true_range import true_range
 
 
 def atr(
