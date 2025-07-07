@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from .ebsw import ebsw
-from .reflex import reflex
+from polars_ti.cycles.ebsw import ebsw
+from polars_ti.cycles.reflex import reflex
 
 __all__ = [
     "ebsw",

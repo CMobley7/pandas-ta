@@ -1,20 +1,20 @@
 # -*- coding: utf-8 -*-
-from .aberration import aberration
-from .accbands import accbands
-from .atr import atr
-from .atrts import atrts
-from .bbands import bbands
-from .chandelier_exit import chandelier_exit
-from .donchian import donchian
-from .hwc import hwc
-from .kc import kc
-from .massi import massi
-from .natr import natr
-from .pdist import pdist
-from .rvi import rvi
-from .thermo import thermo
-from .true_range import true_range
-from .ui import ui
+from polars_ti.volatility.aberration import aberration
+from polars_ti.volatility.accbands import accbands
+from polars_ti.volatility.atr import atr
+from polars_ti.volatility.atrts import atrts
+from polars_ti.volatility.bbands import bbands
+from polars_ti.volatility.chandelier_exit import chandelier_exit
+from polars_ti.volatility.donchian import donchian
+from polars_ti.volatility.hwc import hwc
+from polars_ti.volatility.kc import kc
+from polars_ti.volatility.massi import massi
+from polars_ti.volatility.natr import natr
+from polars_ti.volatility.pdist import pdist
+from polars_ti.volatility.rvi import rvi
+from polars_ti.volatility.thermo import thermo
+from polars_ti.volatility.true_range import true_range
+from polars_ti.volatility.ui import ui
 
 __all__ = [
     "aberration",

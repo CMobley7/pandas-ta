@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-from .drawdown import drawdown
-from .log_return import log_return
-from .percent_return import percent_return
+from polars_ti.performance.drawdown import drawdown
+from polars_ti.performance.log_return import log_return
+from polars_ti.performance.percent_return import percent_return
 
 __all__ = [
     "drawdown",

@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-from .entropy import entropy
-from .kurtosis import kurtosis
-from .mad import mad
-from .median import median
-from .quantile import quantile
-from .skew import skew
-from .stdev import stdev
-from .tos_stdevall import tos_stdevall
-from .variance import variance
-from .zscore import zscore
+from polars_ti.statistics.entropy import entropy
+from polars_ti.statistics.kurtosis import kurtosis
+from polars_ti.statistics.mad import mad
+from polars_ti.statistics.median import median
+from polars_ti.statistics.quantile import quantile
+from polars_ti.statistics.skew import skew
+from polars_ti.statistics.stdev import stdev
+from polars_ti.statistics.tos_stdevall import tos_stdevall
+from polars_ti.statistics.variance import variance
+from polars_ti.statistics.zscore import zscore
 
 __all__ = [
     "entropy",
