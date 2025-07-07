@@ -7,20 +7,6 @@ from polars_ti.utils._math import linear_regression
 from polars_ti.utils._time import total_time
 from polars_ti.utils._validate import v_series
 
-__all__ = [
-    "cagr",
-    "calmar_ratio",
-    "downside_deviation",
-    "jensens_alpha",
-    "log_max_drawdown",
-    "max_drawdown",
-    "optimal_leverage",
-    "pure_profit_score",
-    "sharpe_ratio",
-    "sortino_ratio",
-    "volatility",
-]
-
 
 def cagr(close: Series) -> IntFloat:
     """Compounded Annual Growth Rate
