@@ -199,6 +199,8 @@ scipy==1.13.1
     #   statsmodels
     #   stochastic
     #   vectorbt
+setuptools==80.9.0
+    # via ta-lib
 six==1.17.0
     # via
     #   html5lib
@@ -211,7 +213,7 @@ statsmodels==0.14.5
     # via polars-ti (pyproject.toml)
 stochastic==0.7.0
     # via polars-ti (pyproject.toml)
-ta-lib==0.4.28
+ta-lib==0.6.4
     # via polars-ti (pyproject.toml)
 threadpoolctl==3.6.0
     # via scikit-learn

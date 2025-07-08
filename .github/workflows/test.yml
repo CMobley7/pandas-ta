@@ -28,19 +28,20 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Install TA-lib and set ENV
+      - name: Install TA-lib C library and dependencies
         shell: bash
         run: |
+          # Build TA-Lib C library
           wget https://raw.githubusercontent.com/mrjbq7/ta-lib/master/tools/build_talib_from_source.bash
           chmod +x build_talib_from_source.bash
-          ./build_talib_from_source.bash $DEPS_PATH
-          echo "TA_INCLUDE_PATH=${{ github.workspace }}/dependencies/include" >> $GITHUB_ENV
-          echo "TA_LIBRARY_PATH=${{ github.workspace }}/dependencies/lib" >> $GITHUB_ENV
-        env:
-          DEPS_PATH: ${{ github.workspace }}/dependencies
+          ./build_talib_from_source.bash ${{ github.workspace }}/dependencies
 
-      - name: Install dependencies
-        run: uv pip sync requirements.lock
+          # Set environment variables for TA-Lib Python package build
+          export TA_INCLUDE_PATH=${{ github.workspace }}/dependencies/include
+          export TA_LIBRARY_PATH=${{ github.workspace }}/dependencies/lib
+
+          # Install all dependencies, including TA-Lib Python package
+          uv pip sync requirements.lock
 
       - name: Install polars-ti
         run: uv pip install --no-deps -e .
