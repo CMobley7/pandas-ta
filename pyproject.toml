@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["polars_ti"]
+
+[project]
+name = "polars_ti"
+version = "0.1.0"
+authors = [
+  { name="Christopher Mobley" },
+]
+description = "Polars Technical Indicators, Polars TI, is a free, Open Source, and easy to use Technical Indicators library with a Pandas DataFrame Extension. It has over 200 indicators, utility functions and TA Lib Candlestick Patterns."
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Science/Research",
+    "Topic :: Office/Business :: Financial",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+keywords = [
+    "technical indicators", "finance", "trading", "backtest", "pandas", "numpy", "numba", "vectorbt", "yfinance", "python3"
+]
+
+dependencies = [
+    "numba==0.59.1",
+    "numpy==1.26.4",
+    "pandas==2.2.2",
+    "pandas-datareader==0.10.0",
+    "scipy==1.13.1",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/CMobley7/polars-ti"
+"Bug Tracker" = "https://github.com/CMobley7/polars-ti/issues"
+"Download" = "https://github.com/CMobley7/polars-ti.git"
+
+[project.optional-dependencies]
+full = [
+    "polars-ti[test]", # Include test dependencies in full
+    "vectorbt",
+    "matplotlib==3.8.2",
+    "alpha-vantage",
+    "mplfinance",
+    "python-dotenv",
+    "scikit-learn",
+    "statsmodels",
+    "stochastic",
+    "tqdm",
+]
+test = [
+    "TA-Lib==0.6.4",
+    "yfinance==0.2.40",
+    "pytest==7.1.2",
+]

@@ -83,30 +83,137 @@ _Polars Technical Indicators_ (**Polars TI**) is an easy to use library that lev
 
 <br/>
 
-**Installation**
-===================
+# Installation
 
-Stable
-------
-The ```pip``` version is the last stable release. Version: *0.3.14b*
-```sh
-$ pip install polars-ti
+We recommend using `uv` for the fastest and most reliable installation experience. Instructions for `pip` and `conda` are also provided.
+
+### A Critical Prerequisite: TA-Lib
+
+This library uses the `TA-Lib` library for many of its candlestick pattern calculations. You **must** install the underlying C library before installing `polars-ti`.
+
+<details>
+<summary><b>Click to expand TA-Lib installation instructions for your OS</b></summary>
+
+**Linux (Debian/Ubuntu)**
+```bash
+sudo apt-get update
+sudo apt-get install -y build-essential libta-lib-dev
 ```
 
-Latest Version
---------------
-Best choice! Version: *0.3.14b*
+**Linux (Fedora/CentOS/RHEL)**
+```bash
+sudo dnf install ta-lib-devel
+```
+
+**macOS**
+```bash
+brew install ta-lib
+```
+
+**Windows**
+Installing TA-Lib on Windows can be challenging. The recommended approach is to use a pre-compiled wheel (`.whl`) file.
+
+1.  Go to the [Unofficial Windows Binaries for Python Extension Packages](https://www.lfd.uci.edu/~gohlke/pythonlibs/#ta-lib) website.
+2.  Download the TA-Lib wheel file that matches your Python version and system architecture (e.g., `TA_Lib‑0.4.28‑cp311‑cp311‑win_amd64.whl` for Python 3.11 on 64-bit Windows).
+3.  Open your terminal, navigate to the download directory, and install it using `pip` or `uv`:
+    ```bash
+    # Using uv
+    uv pip install TA_Lib‑0.4.28‑cp311‑cp311‑win_amd64.whl
+
+    # Or using pip
+    pip install TA_Lib‑0.4.28‑cp311‑cp311‑win_amd64.whl
+    ```
+</details>
+
+---
+
+### Method 1: `uv` (Recommended)
+
+`uv` is an extremely fast Python package installer and resolver.
+
+1.  **Install `uv`:**
+    ```bash
+    # macOS / Linux
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+
+    # Windows
+    powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+    ```
+
+2.  **Create and activate a virtual environment:**
+    ```bash
+    # Create the venv
+    uv venv
+
+    # Activate it
+    source .venv/bin/activate
+    ```
+
+3.  **Install `polars-ti`:**
+    To get all features, including TA-Lib patterns and `yfinance` integration, install the `full` extra:
+    ```bash
+    uv pip install "polars-ti[full]"
+    ```
+
+### Method 2: `pip` and `venv`
+
+1.  **Create and activate a virtual environment:**
+    ```bash
+    # Create the venv
+    python -m venv .venv
+
+    # Activate it (macOS/Linux)
+    source .venv/bin/activate
+
+    # Activate it (Windows)
+    .venv\Scripts\activate
+    ```
+
+2.  **Install `polars-ti`:**
+    ```bash
+    pip install "polars-ti[full]"
+    ```
+
+### Method 3: `conda`
+
+Using `conda` can simplify the installation of `TA-Lib`, as it handles the binary dependency automatically.
+
+1.  **Create and activate a conda environment:**
+    ```bash
+    conda create -n polars-ti-env python=3.11
+    conda activate polars-ti-env
+    ```
+
+2.  **Install TA-Lib and `polars-ti`:**
+    Install `TA-Lib` from the `conda-forge` channel first, then install `polars-ti` using pip.
+    ```bash
+    conda install -c conda-forge ta-lib
+    pip install "polars-ti[full]"
+    ```
+
+---
+
+### Versions
+
+#### Stable
+The `pip` version is the last stable release.
+```sh
+$ uv pip install "polars-ti[full]"
+```
+
+#### Latest Version
+Best choice!
 * Includes all fixes and updates between **pypi** and what is covered in this README.
 ```sh
-$ pip install -U git+https://github.com/CMobley7/polars-ti
+$ uv pip install "polars-ti[full] @ git+https://github.com/CMobley7/polars-ti"
 ```
 
-Cutting Edge
-------------
+#### Cutting Edge
 This is the _Development Version_ which could have bugs and other undesireable side effects. Use at own risk!
 ```sh
-$ pip install -U git+https://github.com/CMobley7/polars-ti.git@development
+$ uv pip install "polars-ti[full] @ git+https://github.com/CMobley7/polars-ti.git@development"
 ```
+
 
 <br/>
 

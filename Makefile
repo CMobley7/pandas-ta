@@ -13,7 +13,7 @@ clean:
 	find __pycache__ -type d -name "__pycache__" -exec rm -r {} +
 
 init:
-	pip install -r requirements.txt
+	uv pip sync requirements.lock
 
 test_metrics:
 	pytest -vv -s -l -W ignore::DeprecationWarning --cache-clear tests/test_metrics.py
